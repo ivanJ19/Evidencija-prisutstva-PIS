@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Projekt - Student</title>
+
+	<!-- Styles -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+
+	<!-- Javascripts -->
+	<script src="js/system/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+	<div class="container container-margin-top">
+		<div class="row">
+			<div class="w-50 mx-auto">
+				<div class="card">
+					<h5 class="card-header">Prijava</h5>
+					<div class="card-body">
+						<form id="forma">
+							<div class="mb-3">
+								<label for="email" class="form-label">Email adresa</label>
+								<input type="email" class="form-control" id="email" />
+							</div>
+							<div class="mb-3">
+								<label for="password" class="form-label">Lozinka</label>
+								<input type="password" class="form-control" id="password" />
+							</div>
+							<hr>
+							<div id="msg" class="alert alert-danger d-none" role="alert"></div>
+							<button id="login" class="btn btn-success btn-sm">Prijava</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Javascripts -->
+	<script src="js/login/login.js"></script>
+</body>
+
+</html>

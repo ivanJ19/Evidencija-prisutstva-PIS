@@ -1,0 +1,11 @@
+version: "3.8"
+ 
+services:
+  helloworld:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "project-student-web-service:latest"
+    container_name: "project-student-web-service"
+    ports:
+      - "8080:8080"

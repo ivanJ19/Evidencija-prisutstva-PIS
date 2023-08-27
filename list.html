@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projekt - Student</title>
+
+    <!-- Styles -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet">
+
+    <!-- Javascripts -->
+    <script src="../js/system/bootstrap.bundle.min.js"></script>
+    <script src="../js/system/check-session.js"></script>
+</head>
+
+<body>
+    <div class="container container-margin-top">
+        <div class="row">
+            <div class="w-50 mx-auto">
+                <div class="card">
+                    <h5 class="card-header">Dobrodošli, <span id="name"></span></h5>
+                    <div class="card-body">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <div class="container-fluid">
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                        <li class="nav-item">
+                                            <button class="nav-link active" aria-current="page"
+                                                id="home">Početna</button>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <button class="nav-link dropdown-toggle" href="#" id="ddusertype"
+                                                role="button" data-bs-toggle="dropdown" aria-expanded="false">Tipovi
+                                                korisnika</button>
+                                            <ul class="dropdown-menu" aria-labelledby="ddusertype">
+                                                <li><button class="dropdown-item" id="createusertype">Kreiraj
+                                                        tip</button></li>
+                                                <li><button class="dropdown-item" id="usertypelist">Lista
+                                                        tipova</button></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <button class="nav-link dropdown-toggle" href="#" id="ddusers" role="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">Korisnici</button>
+                                            <ul class="dropdown-menu" aria-labelledby="ddusers">
+                                                <li><button class="dropdown-item" id="createuser">Kreiraj
+                                                        korisnika</button></li>
+                                                <li><button class="dropdown-item" id="userlist">Lista korisnika</button>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <button class="nav-link dropdown-toggle" href="#" id="ddusers" role="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">Predmeti</button>
+                                            <ul class="dropdown-menu" aria-labelledby="ddusers">
+                                                <li><button class="dropdown-item" id="createcourse">Kreiraj
+                                                        predmet</button></li>
+                                                <li><button class="dropdown-item" id="courselist">Lista predmeta</button>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <button class="nav-link dropdown-toggle" href="#" id="ddconncetions"
+                                                role="button" data-bs-toggle="dropdown"
+                                                aria-expanded="false">Povezivanje</button>
+                                            <ul class="dropdown-menu" aria-labelledby="ddconncetions">
+                                                <li><button class="dropdown-item" id="connstudentcourse">Studenti -
+                                                        predmeti</button></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <div class="d-flex">
+                                        <button class="btn btn-danger btn-sm" id="logout">Odjava</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                        <hr>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" colspan="4">Lista predmeta</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Naziv</th>
+                                    <th scope="col">Opis</th>
+                                    <th scope="col">Akcija</th>
+                                </tr>
+                            </thead>
+                            <tbody id="list"></tbody>
+                        </table>
+
+                        <!-- Modal -->
+                        <div class="modal fade show" id="confirmDelete" tabindex="-1" aria-labelledby="confirmDelete"
+                            aria-hidden="true" data-bs-backdrop="static">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="confirmDelete">Potvrda brisanja</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        Jeste li sigurni da želite obrisati odabrani podatak? Ako jeste, onda kliknite na tipku "Da", u protivnom kliknite na tipku "Ne".
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button id="btnNo" type="button" class="btn btn-success" data-bs-dismiss="modal">Ne</button>
+                                        <button id="btnYes" ttype="button" class="btn btn-danger">Da</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascripts -->
+    <script src="../js/system/menu.js"></script>
+    <script src="../js/system/functions.js"></script>
+    <script src="../js/courses/list.js"></script>
+</body>
+
+</html>
